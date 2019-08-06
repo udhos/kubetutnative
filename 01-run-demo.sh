@@ -37,6 +37,8 @@ msg
 run '"kubectl run" is DEPRECATED for deployments: kubectl delete deployments/demo'
 msg
 run kubectl delete pods/demo
+msg OR
+run kubectl delete pods --selector app=demo
 msg
 msg hit ENTER to continue
 read i
