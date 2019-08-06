@@ -66,32 +66,26 @@ fi
 msg you can verify the cluster with:
 msg
 if [ -n "$REGION" ]; then
-	msg gcloud container clusters describe $CLUSTER --region=$REGION
+	run gcloud container clusters describe $CLUSTER --region=$REGION
 else
-	msg gcloud container clusters describe $CLUSTER --zone=$ZONE
+	run gcloud container clusters describe $CLUSTER --zone=$ZONE
 fi
 msg
-msg hit ENTER to continue
-read i
-
 msg verify cluster version:
 msg
-msg kubectl version
+run kubectl version
 msg
 msg verify cluster details:
 msg
-msg kubectl cluster-info
+run kubectl cluster-info
 msg
 msg verify kube config:
 msg
-msg 'kubectl config view ;# see also more ~/.kube/config'
+run 'kubectl config view ;# see also more ~/.kube/config'
 msg
-msg hit ENTER to continue
-read i
-
 msg list nodes:
 msg
-msg kubectl get nodes
+run kubectl get nodes
 msg
 msg hit ENTER to continue
 read i
