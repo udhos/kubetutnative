@@ -27,6 +27,8 @@ msg
 run kubectl port-forward deploy/demo 9999:8888 --address 0.0.0.0
 msg
 run curl localhost:9999
+msg
+run kubectl delete deployments/demo
 
 msg
 msg hit ENTER to continue
