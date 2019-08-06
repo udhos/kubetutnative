@@ -20,9 +20,11 @@ run() {
 msg
 msg run demo:
 msg
+msg See: kubectl run - https://kubernetes.io/docs/reference/kubectl/conventions/
+msg
 run 'DEPRECATED: kubectl run demo --image=udhos/myhello --port=9999 --labels app=demo'
 msg
-run kubectl run --generator=run-pod/v1 demo --image=udhos/myhello --port=9999 --labels app=demo
+run kubectl run demo --generator=run-pod/v1 --image=udhos/myhello --port=9999 --labels app=demo
 msg
 run kubectl get pods --selector app=demo
 msg
