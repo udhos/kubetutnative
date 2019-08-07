@@ -1,6 +1,4 @@
 #!/bin/bash
-#
-# https://github.com/udhos/kubetut
 
 me=$(basename "$0")
 
