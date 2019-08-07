@@ -36,6 +36,12 @@ run kubectl port-forward services/demo 9999:9999 --address 0.0.0.0
 msg
 run curl localhost:9999
 msg
+msg get resources deployments/services created:
+msg
+run kubectl get all --selector app=demo
+msg OR
+run kubectl get -f lib/demo
+msg
 msg clean up everything:
 msg
 run kubectl delete --selector app=demo
