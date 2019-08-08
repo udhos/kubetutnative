@@ -41,6 +41,10 @@ run helm search redis
 msg
 run 'helm search ;# list all charts'
 msg
+run helm delete demo
+msg
+run helm list
+msg
 msg hit ENTER to continue
 read i
 
