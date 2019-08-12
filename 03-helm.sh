@@ -18,6 +18,7 @@ run() {
 msg
 msg intall helm, run tiller, then check:
 msg
+run 'export HELM_HOST=localhost:44134 ;# tiller running on :44134'
 run helm version
 msg
 msg deploy demo using helm:
