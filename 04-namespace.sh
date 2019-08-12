@@ -17,11 +17,15 @@ run() {
 
 msg run app 'demo' in a namespace 'demo'
 msg
-msg resource ResourceQuota sets a hard limit of 100 pods
-msg  running at once. it affects the namespace you apply
-msg  it to (-n <namespace>).
+msg 'resource ResourceQuota sets a hard limit of 100 pods'
+msg ' running at once. it affects the namespace you apply'
+msg ' it to (-n <namespace>).'
 msg
 run more lib/demo-namespace/resourcequota.yaml
+msg
+msg resource LimitRange sets default values for limits and requests.
+msg
+run more lib/demo-namespace/limitrange.yaml
 msg
 msg create namespace 'demo':
 msg
@@ -36,6 +40,8 @@ msg
 run kubectl get all -n demo
 msg
 run kubectl describe resourcequotas -n demo
+msg
+run kubectl describe limitrange -n demo
 msg
 msg CAUTION: deleting a namespace deletes all its resources!!!
 msg
