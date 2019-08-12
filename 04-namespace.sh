@@ -35,6 +35,8 @@ run kubectl get namespaces
 msg
 run kubectl get all -n demo
 msg
+run kubectl describe resourcequotas -n demo
+msg
 msg CAUTION: deleting a namespace deletes all its resources!!!
 msg
 run kubectl delete -f lib/demo-namespace/namespace.yaml
