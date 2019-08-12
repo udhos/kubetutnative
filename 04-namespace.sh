@@ -18,7 +18,8 @@ run() {
 msg run app 'demo' in a namespace 'demo'
 msg
 msg resource ResourceQuota sets a hard limit of 100 pods
-msg  running at once in that namespace:
+msg  running at once. it affects the namespace you apply
+msg  it to (-n <namespace>).
 msg
 run more lib/demo-namespace/resourcequota.yaml
 msg
