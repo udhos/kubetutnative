@@ -17,6 +17,11 @@ run() {
 
 msg run app 'demo' in a namespace 'demo'
 msg
+msg resource ResourceQuota sets a hard limit of 100 pods
+msg  running at once in that namespace:
+msg
+run more lib/demo-namespace/resourcequota.yaml
+msg
 msg create namespace 'demo':
 msg
 run kubectl apply -f lib/demo-namespace/namespace.yaml
